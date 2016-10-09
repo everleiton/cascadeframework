@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" media="all" href="../assets/css/cascade/production/build-full.min.css">
+      <link rel="stylesheet" type="text/css" media="all" href="../assets/css/site.css">
+      <link rel="stylesheet" href="../css/style.css" media="screen" title="no title">
+      <!--[if lt IE 8]><link rel="stylesheet" href="assets/css/cascade/production/icons-ie7.min.css"><![endif]-->
+      <!--[if lt IE 9]><script src="assets/js/shim/iehtmlshiv.js"></script><![endif]-->
+      <title>Hotel Arenal Springs</title>
+    
+      <link rel="shortcut icon" href="../img/icono.png" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style type="text/css">
+      </style>
+ </head>
+  <body>
+        <div class="site-header-fixture">
+                          
+            <div class="site-header">
+                <div class="col width-fit mobile-width-fit">
+                    <div class="cell">
+                        <a href="#" class="logo"></a>
+                    </div>
+                </div>
+                <div class="col width-fill mobile-width-fill">
+                    <div class="cell">
+                        <ul class="col nav">
+                          <li ><a href="../index.html">Hotel Arenal Springs</a></li>
+                          <li id="res"><a href="./reservaciones.html">Reservaciones</a></li>
+                          <li class="active"><a href="./ubicacion.html">Ubicación</a></li>
+                          <li ><a href="./contacto.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-center">
+            <div class="site-body panel">
+                <div class="body">
+                    <div class="cell">
+                        <div class="col">
+                            <div class="cell">
+                                <div class="page-header">
+                                    <h1>Ubicación</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="label background-green" id="labeltexto">Como llegar a Arenal Springs Resort y Spa .</span>
+                                        <p id="text">
+                                            ~ Utilice cualquiera de los puntos para seleccionar mapas de partida y de destino después de hacerlo, verá una explicación detallada de cómo llegar al complejo Arenal Springs debajo del mapa. También puede entrada de coordenadas nuestro GPS en su propia unidad de GPS ~
+                                        </p>
+                            
+                        </video>
+                      
+                        <div class="col width-fill">
+                          <div id="map"></div>
+                          <div class="col">
+                            <div class="cell">
+                              <hr>
+                            </div>
+                          </div>
+                          <div class="cell tab-block left-nav">
+                                                    <div class="tabs width-1of3">
+                                                        <ul class="left nav">
+                                                            <li class="active"><a href="#tabcontent7">Coordenadas GD (grados decimales)</a></li>
+                                                            <li class=""><a href="#tabcontent8">Coordenadas GMS (grados, minutos, segundos) </a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-content width-fill">
+                                                        <div class="cell" id="tabcontent7">
+                                                            <br>Latitud >> 10.5021167<br>
+                                                            Longitud >> -84.68333333333334<br>
+                                                        </div>
+                                                        <div class="cell hidden-tab" id="tabcontent8">
+                                                            Latitud: N 10″30’07.62″<br>
+                                                            Longitud: O 84″41’00.00″.<br><br>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                      
+                          
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer">
+              <div class="col width-fit">
+                <div class="cell">
+                  <img src="../img/logo2.png" alt="" />
+                </div>
+              </div>
+              <div class="col width-fill">
+                <div class="cell pipes">
+                  <ul class="nav">
+                    <li><a href="https://www.facebook.com/eleitonm">Facebook desarollador </a></li>
+                    <li><a >Ever y Milena</a></li>
+                    <li><a >Todos los Derechos Reservados 2016</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <script>
+          var map;
+          function initMap() {
+            var points = [
+              {lat: 10.5021167, lng: -84.68333333333334},
+      
+            ];
+            var myLatLng = {lat: 10.5021167, lng: -84.68333333333334};
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: myLatLng,
+              zoom: 9
+            });
+
+            points.forEach(function(val) {
+              var marker = new google.maps.Marker({
+                position: val,
+                map: map,
+                draggable: true,
+                title: 'Hotel Arenal Springs',
+                animation: google.maps.Animation.DROP,
+              });
+
+              marker.addListener('click', function() {
+                map.setZoom(8);
+                map.setCenter(marker.getPosition());
+              });
+
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHLYCSbcwrDOAoCPMCEJuQZ5oGHkBK3kE&callback=initMap"
+        async defer></script>
+    
+
+</body>
+</html>
